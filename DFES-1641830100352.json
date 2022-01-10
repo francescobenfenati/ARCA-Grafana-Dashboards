@@ -1,0 +1,1349 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 23,
+  "iteration": 1641829259330,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "dfes",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "graph": false,
+              "legend": false,
+              "tooltip": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "dBm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "graph": {},
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltipOptions": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "Port"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "value",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "InputPower_dBm"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "dfes",
+              "operator": "=~",
+              "value": "/^$dfes$/"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Input Power",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 10
+      },
+      "id": 19,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 11
+          },
+          "id": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-1a"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-1a",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-1a",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 17,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 21
+          },
+          "id": 27,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-2b"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-2b",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-2b",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 15,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 31
+          },
+          "id": 28,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-3c"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-3c",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-3c",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 13,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 41
+          },
+          "id": 29,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-4d"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-4d",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-4d",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "id": 11,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 51
+          },
+          "id": 30,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-5a"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-5a",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-5a",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 15
+      },
+      "id": 9,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 61
+          },
+          "id": 31,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-6b"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-6b",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-6b",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 16
+      },
+      "id": 7,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 71
+          },
+          "id": 32,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-11c"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-11c",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-11c",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 5,
+      "panels": [
+        {
+          "datasource": "dfes",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red",
+                    "value": null
+                  },
+                  {
+                    "color": "green",
+                    "value": -35
+                  }
+                ]
+              },
+              "unit": "dBm"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 24,
+            "x": 0,
+            "y": 81
+          },
+          "id": 33,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "Port"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "InputPower_dBm"
+                    ],
+                    "type": "field"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "dfes",
+                  "operator": "=",
+                  "value": "dfes-jb2-12d"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "dfes-jb2-12d",
+          "transformations": [
+            {
+              "id": "seriesToColumns",
+              "options": {
+                "byField": "Time"
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {},
+                "indexByName": {
+                  "Time": 0,
+                  "value.InputPower_dBm {Port: Gi1/0/10}": 10,
+                  "value.InputPower_dBm {Port: Gi1/0/11}": 11,
+                  "value.InputPower_dBm {Port: Gi1/0/12}": 12,
+                  "value.InputPower_dBm {Port: Gi1/0/13}": 13,
+                  "value.InputPower_dBm {Port: Gi1/0/14}": 14,
+                  "value.InputPower_dBm {Port: Gi1/0/15}": 15,
+                  "value.InputPower_dBm {Port: Gi1/0/16}": 16,
+                  "value.InputPower_dBm {Port: Gi1/0/17}": 17,
+                  "value.InputPower_dBm {Port: Gi1/0/18}": 18,
+                  "value.InputPower_dBm {Port: Gi1/0/1}": 1,
+                  "value.InputPower_dBm {Port: Gi1/0/2}": 2,
+                  "value.InputPower_dBm {Port: Gi1/0/3}": 3,
+                  "value.InputPower_dBm {Port: Gi1/0/4}": 4,
+                  "value.InputPower_dBm {Port: Gi1/0/5}": 5,
+                  "value.InputPower_dBm {Port: Gi1/0/6}": 6,
+                  "value.InputPower_dBm {Port: Gi1/0/7}": 7,
+                  "value.InputPower_dBm {Port: Gi1/0/8}": 8,
+                  "value.InputPower_dBm {Port: Gi1/0/9}": 9
+                },
+                "renameByName": {
+                  "value.InputPower_dBm {Port: Gi1/0/1}": "",
+                  "value.InputPower_dBm {Port: Gi1/0/2}": ""
+                }
+              }
+            }
+          ],
+          "type": "stat"
+        }
+      ],
+      "title": "dfes-jb2-12d",
+      "type": "row"
+    }
+  ],
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": [
+            "dfes-jb2-11c"
+          ],
+          "value": [
+            "dfes-jb2-11c"
+          ]
+        },
+        "datasource": "dfes",
+        "definition": "show tag values from \"value\" with key = \"dfes\"",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "dfes",
+        "options": [
+          {
+            "selected": false,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": true,
+            "text": "dfes-jb2-11c",
+            "value": "dfes-jb2-11c"
+          },
+          {
+            "selected": false,
+            "text": "dfes-jb2-12d",
+            "value": "dfes-jb2-12d"
+          },
+          {
+            "selected": false,
+            "text": "dfes-jb2-1a",
+            "value": "dfes-jb2-1a"
+          },
+          {
+            "selected": false,
+            "text": "dfes-jb2-2b",
+            "value": "dfes-jb2-2b"
+          },
+          {
+            "selected": false,
+            "text": "dfes-jb2-3c",
+            "value": "dfes-jb2-3c"
+          },
+          {
+            "selected": false,
+            "text": "dfes-jb2-4d",
+            "value": "dfes-jb2-4d"
+          },
+          {
+            "selected": false,
+            "text": "dfes-jb2-5a",
+            "value": "dfes-jb2-5a"
+          },
+          {
+            "selected": false,
+            "text": "dfes-jb2-6b",
+            "value": "dfes-jb2-6b"
+          }
+        ],
+        "query": "show tag values from \"value\" with key = \"dfes\"",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "DFES",
+  "uid": "-PkeifT7z",
+  "version": 5
+}
